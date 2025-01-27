@@ -253,6 +253,10 @@ class OpToHtmlConverter {
         (tagAttrs = tagAttrs.concat(
           makeAttr('width', this.op.attributes.width)
         ));
+      this.op.attributes.height &&
+        (tagAttrs = tagAttrs.concat(
+          makeAttr('height', this.op.attributes.height)
+        ));
       return tagAttrs.concat(makeAttr('src', this.op.insert.value));
     }
 
